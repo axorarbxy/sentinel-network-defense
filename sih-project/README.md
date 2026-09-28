@@ -101,6 +101,7 @@ If the backend is not reachable, the live WebSocket client retries a limited num
 | Command | Description |
 |:--|:--|
 | `npm run dev` | Start Vite’s local development server. |
+| `npm run test` | Run the Vitest route behavior suite once. |
 | `npm run build` | Run TypeScript project checks and create a production build in `dist/`. |
 | `npm run lint` | Run Oxlint. |
 | `npm run preview` | Preview the built frontend locally. |
