@@ -19,6 +19,14 @@
 
 ---
 
+<img width="693" height="313" alt="SIH2026-IDEA-Presentation pptx (1)" src="https://github.com/user-attachments/assets/3dc9c317-0c39-419f-a6dd-c52d25a6dec7" />
+
+<img width="667" height="300" alt="SIH2026-IDEA-Presentation pptx (2)" src="https://github.com/user-attachments/assets/82ad441a-e607-42ac-b038-93abdb179edc" />
+
+<img width="726" height="327" alt="SIH2026-IDEA-Presentation pptx (3)" src="https://github.com/user-attachments/assets/ffa942d1-132b-418b-9406-2cfad7cefce8" />
+
+
+
 > [!IMPORTANT]
 > **SENTINEL is a research prototype and decision-support interface—not a production IDS, firewall, or automated containment system.** The live dashboard currently uses a generated sample stream. Uploaded PCAP/PCAPNG/CSV files are analyzed locally by the backend, but prototype device actions do not modify a real host or network. See [Prototype boundaries](#-prototype-boundaries--security-notes).
 
