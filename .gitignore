@@ -1,0 +1,36 @@
+# Frontend dependencies and build output
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+
+# Python environments and generated files
+**/venv/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+
+# Local environment files and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local databases and temporary uploads
+**/sentinel.db
+**/sentinel.db-*
+/sih-backend/temp_uploads/
+
+# Scratch / ad-hoc test artifacts
+/sih-backend/scratch/
+/sih-backend/scratch_*
+
+# Large raw CIC-IDS capture files (download separately when needed)
+/sih-project/data/*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
