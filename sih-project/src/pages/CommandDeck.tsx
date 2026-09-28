@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useSentinelStore } from '../store/useSentinelStore';
 import { NetworkTwin } from '../components/NetworkTwin';
 import { KillChainRail } from '../components/KillChainRail';
@@ -12,7 +13,13 @@ import { EdgeDetailPopover } from '../components/EdgeDetailPopover';
 import { Shield, Radio } from 'lucide-react';
 
 export const CommandDeck: React.FC = () => {
+  const { nodeId } = useParams<{ nodeId?: string }>();
   const { stateUpdate, isForecastMode, tickLiveSimulation, isMockMode } = useSentinelStore();
+  const setSelectedNodeId = useSentinelStore((state) => state.setSelectedNodeId);
+
+  useEffect(() => {
+    if (nodeId) setSelectedNodeId(nodeId);
+  }, [nodeId, setSelectedNodeId]);
 
   // Tick simulation every 2.5s if in mock mode
   useEffect(() => {

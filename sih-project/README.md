@@ -28,7 +28,7 @@ SENTINEL’s frontend is an interactive analyst workspace for viewing network st
 | Workspace | Route | What it does |
 |:--|:--|:--|
 | **Command Deck** | `/` | Displays the network twin, risk overview, event feed, kill-chain rail, and timeline. |
-| **Host investigation** | `/investigate/:nodeId` | Currently renders the Command Deck; consuming `nodeId` to preselect a host is not wired yet. |
+| **Host investigation** | `/investigate/:nodeId` | Opens the Command Deck with `nodeId` selected in the network graph and host detail panel. |
 | **Incident Replay** | `/replay` | Plays a selected scenario with speed controls and model/baseline probability overlays. |
 | **Traffic Analysis** | `/analyze` | Uploads PCAP, PCAPNG, or CSV traffic for backend analysis and presents the report. |
 | **Benchmarks** | `/benchmarks` | Shows model metrics, comparisons, and confusion matrices. |
