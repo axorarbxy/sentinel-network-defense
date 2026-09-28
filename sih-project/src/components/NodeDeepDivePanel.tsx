@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useMatch, useNavigate } from 'react-router-dom';
 import { useSentinelStore } from '../store/useSentinelStore';
 import { ShapExplainabilityStrip } from './ShapExplainabilityStrip';
 import { X, Server, ShieldAlert, Activity, Network, Sparkles, Layers, Info, Power, RotateCcw } from 'lucide-react';
@@ -17,6 +18,8 @@ export const NodeDeepDivePanel: React.FC = () => {
     setNodeForecast,
     setNodeConnectionState,
   } = useSentinelStore();
+  const navigate = useNavigate();
+  const isInvestigationRoute = useMatch('/investigate/:nodeId') !== null;
   const [controlMessage, setControlMessage] = useState('');
   const [pendingRequestId, setPendingRequestId] = useState<string | null>(null);
 
@@ -165,7 +168,11 @@ export const NodeDeepDivePanel: React.FC = () => {
         </div>
 
         <button
-          onClick={() => setSelectedNodeId(null)}
+          onClick={() => {
+            setSelectedNodeId(null);
+            if (isInvestigationRoute) navigate('/', { replace: true });
+          }}
+          aria-label="Close host details"
           className="p-1 rounded-md text-gray-400 hover:text-white hover:bg-sentinel-border transition-colors shrink-0"
         >
           <X className="w-4 h-4" />
