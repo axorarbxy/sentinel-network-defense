@@ -28,8 +28,7 @@
 /sih-backend/scratch/
 /sih-backend/scratch_*
 
-# Large raw CIC-IDS capture files (download separately when needed)
-/sih-project/data/*.csv
+# Raw CIC-IDS capture files are stored through Git LFS (see .gitattributes)
 
 # OS files
 .DS_Store
